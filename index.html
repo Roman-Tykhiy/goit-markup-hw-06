@@ -54,6 +54,84 @@
             </li>
           </ul>
         </address>
+        <button class="burger_btn" type="button">
+          <svg class="burer_icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <div class="mobile_menu">
+        <div class="container mobile_menu_cont">
+          <button type="button" class="menu_close_btn">
+            <svg class="form_close_btn_ikon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+          </button>
+          <nav class="mobile_menu_nav">
+            <ul class="menu_nav_list">
+              <li class="menu_nav_itam menu_nav_itam_studio">
+                <a class="menu_nav_link menu_color_link" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="menu_nav_itam">
+                <a class="menu_nav_link" href="">Portfolio</a>
+              </li>
+              <li class="menu_nav_itam">
+                <a class="menu_nav_link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="menu_addres">
+            <ul class="menu_adress_list">
+              <li class="menu_addres_itam">
+                <a
+                  class="menu_addres_link menu_color_link"
+                  href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="menu_addres_itam">
+                <a class="menu_addres_link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="menu_soc">
+            <ul class="menu_soc_list">
+              <li class="menu_soc_item">
+                <a class="menu_soc_link" href="">
+                  <svg class="menu_soc_svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu_soc_item">
+                <a class="menu_soc_link" href="">
+                  <svg class="menu_soc_svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu_soc_item">
+                <a class="menu_soc_link" href="">
+                  <svg class="menu_soc_svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu_soc_item">
+                <a class="menu_soc_link" href="">
+                  <svg class="menu_soc_svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -66,7 +144,7 @@
       </section>
       <!-- section_2 -->
       <section class="advantages">
-        <div class="container">
+        <div class="container_advantages">
           <h2 class="advantages_title visually-hidden">Advantages</h2>
           <ul class="advantages-list">
             <li class="advantages-itam">
@@ -122,12 +200,16 @@
       </section>
       <!-- section_3 -->
       <section class="our_teams">
-        <div class="container container_our_teams">
+        <div class="container_our_teams">
           <h2 class="our_teams_title">Our Team</h2>
           <ul class="our_teams_list">
             <li class="our_teams_itam">
               <img
-                src="./images/teamcard1.jpg"
+                srcset="
+                  ./images/aur-team-card1-1x.jpg  1x,
+                  ./images/aur-team-card1-@2x.jpg 2x
+                "
+                src="./images/aur-team card1-1x.jpg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -169,7 +251,11 @@
             </li>
             <li class="our_teams_itam">
               <img
-                src="./images/teamcard2.jpg"
+                srcset="
+                  ./images/aur-team-card2-1x.jpg  1x,
+                  ./images/aur-team-card2-@2x.jpg 2x
+                "
+                src="./images/aur-team-card2-1x.jpg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -211,7 +297,11 @@
             </li>
             <li class="our_teams_itam">
               <img
-                src="./images/teamcard3.jpg"
+                srcset="
+                  ./images/aur-team-card3-1x.jpg  1x,
+                  ./images/aur-team-card3-@2x.jpg 2x
+                "
+                src="./images/aur-team-card3-1x.jpg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -253,7 +343,11 @@
             </li>
             <li class="our_teams_itam">
               <img
-                src="./images/teamcard4.jpg"
+                srcset="
+                  ./images/aur-team-card4-1x.jpg  1x,
+                  ./images/aur-team-card4-@2x.jpg 2x
+                "
+                src="./images/aur-team-card4-1x.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -298,17 +392,43 @@
       </section>
       <!-- section_4 -->
       <section class="our_portfolio">
-        <div class="container our_portfolio_container">
+        <div class="our_portfolio_container">
           <h2 class="our_portfolio_title">Our Portfolio</h2>
           <ul class="our_portfolio_list">
             <li class="our_portfolio_itam">
               <div class="our_portfolio_itam_img">
-                <img
-                  src="./images/portfolio_1.jpg"
-                  alt="Banking App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/pfdeskmin/pfcarddesk6-min.jpg    1x,
+                      ./images/pfdeskmin/pfcarddesk6@2x-min.jpg 2x
+                    "
+                    width="360"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/pftabmin/pfcardtab6-min.jpg    1x,
+                      ./images/pftabmin/pfcardtab6@2x-min.jpg 2x
+                    "
+                    width="258"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/pfmobmin/pfcardmob6-min.jpg    1x,
+                      ./images/pfmobmin/pfcardmob6@2x-min.jpg 2x
+                    "
+                    width="288"
+                  />
+                  <img
+                    src="./images/portfolio_1.jpg"
+                    alt="Banking App"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="our_portfolio_itam_img_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -322,12 +442,37 @@
             </li>
             <li class="our_portfolio_itam">
               <div class="our_portfolio_itam_img">
-                <img
-                  src="./images/portfolio_2.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/pfdeskmin/pfcarddesk5-min.jpg    1x,
+                      ./images/pfdeskmin/pfcarddesk5@2x-min.jpg 2x
+                    "
+                    width="360"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/pftabmin/pfcardtab5-min.jpg    1x,
+                      ./images/pftabmin/pfcardtab5@2x-min.jpg 2x
+                    "
+                    width="258"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/pfmobmin/pfcardmob5-min.jpg    1x,
+                      ./images/pfmobmin/pfcardmob5@2x-min.jpg 2x
+                    "
+                    width="288"
+                  />
+                  <img
+                    src="./images/pfdeskmin/pfcarddesk5-min.jpg"
+                    alt="Marketing"
+                    width="360"
+                  />
+                </picture>
                 <p class="our_portfolio_itam_img_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -341,12 +486,38 @@
             </li>
             <li class="our_portfolio_itam">
               <div class="our_portfolio_itam_img">
-                <img
-                  src="./images/portfolio_3.jpg"
-                  alt="Meditation App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/pfdeskmin/pfcarddesk4-min.jpg    1x,
+                      ./images/pfdeskmin/pfcarddesk4@2x-min.jpg 2x
+                    "
+                    width="360"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/pftabmin/pfcardtab4-min.jpg    1x,
+                      ./images/pftabmin/pfcardtab5@2x-min.jpg 2x
+                    "
+                    width="258"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/pfmobmin/pfcardmob4-min.jpg    1x,
+                      ./images/pfmobmin/pfcardmob4@2x-min.jpg 2x
+                    "
+                    width="288"
+                  />
+                  <img
+                    src="./images/pfdeskmin/pfcarddesk4-min.jpg"
+                    alt="Meditation App"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="our_portfolio_itam_img_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -360,12 +531,37 @@
             </li>
             <li class="our_portfolio_itam">
               <div class="our_portfolio_itam_img">
-                <img
-                  src="./images/portfolio_4.jpg"
-                  alt="Taxi Service"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/pfdeskmin/pfcarddesk3-min.jpg    1x,
+                      ./images/pfdeskmin/pfcarddesk3@2x-min.jpg 2x
+                    "
+                    width="360"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/pftabmin/pfcardtab3-min.jpg    1x,
+                      ./images/pftabmin/pfcardtab3@2x-min.jpg 2x
+                    "
+                    width="258"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/pfmobmin/pfcardmob3-min.jpg    1x,
+                      ./images/pfmobmin/pfcardmob3@2x-min.jpg 2x
+                    "
+                    width="288"
+                  />
+                  <img
+                    src="./images/pfdeskmin/pfcarddesk3-min.jpg"
+                    alt="Taxi Service"
+                    width="360"
+                  />
+                </picture>
                 <p class="our_portfolio_itam_img_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -379,12 +575,38 @@
             </li>
             <li class="our_portfolio_itam">
               <div class="our_portfolio_itam_img">
-                <img
-                  src="./images/portfolio_5.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/pfdeskmin/pfcarddesk2-min.jpg    1x,
+                      ./images/pfdeskmin/pfcarddesk2@2x-min.jpg 2x
+                    "
+                    width="360"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/pftabmin/pfcardtab2-min.jpg    1x,
+                      ./images/pftabmin/pfcardtab2@2x-min.jpg 2x
+                    "
+                    width="258"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/pfmobmin/pfcardmob2-min.jpg    1x,
+                      ./images/pfmobmin/pfcardmob2@2x-min.jpg 2x
+                    "
+                    width="288"
+                  />
+                  <img
+                    src="./images/pfdeskmin/pfcarddesk2-min.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="our_portfolio_itam_img_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -398,12 +620,38 @@
             </li>
             <li class="our_portfolio_itam">
               <div class="our_portfolio_itam_img">
-                <img
-                  src="./images/portfolio_6.jpg"
-                  alt="Online Courses"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/pfdeskmin/pfcarddesk1-min.jpg    1x,
+                      ./images/pfdeskmin/pfcarddesk1@2x-min.jpg 2x
+                    "
+                    width="360"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/pftabmin/pfcardtab1-min.jpg    1x,
+                      ./images/pftabmin/pfcardtab1@2x-min.jpg 2x
+                    "
+                    width="258"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/pfmobmin/pfcardmob1-min.jpg    1x,
+                      ./images/pfmobmin/pfcardmob1@2x-min.jpg 2x
+                    "
+                    width="288"
+                  />
+                  <img
+                    src="./images/pfdeskmin/pfcarddesk1-min.jpg"
+                    alt="Online Courses"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="our_portfolio_itam_img_text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -419,7 +667,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer, hidden">
       <div class="container container_footer">
         <div class="container_footer_logo">
           <a class="footer_logotyp" href="./index.html"
@@ -484,7 +732,7 @@
         </div>
       </div>
     </footer>
-    <div class="chekbox">
+    <div class="chekbox, hidden">
       <div class="form_wraper">
         <button type="button" class="form_close_btn">
           <svg class="form_close_btn_ikon" width="8" height="8">
