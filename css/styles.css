@@ -516,10 +516,11 @@ screen and (min-resolution: 2dppx) {
 .our_teams {
     max-width: 320px;
     padding-top: 96px;
-    padding-bottom: 96;
+    padding-bottom: 96px;
     background: #f4f4fd;
     margin: 0 auto;
     margin-bottom: 96px;
+    
 }
 .our_teams_title {
         font-weight: 700;
@@ -537,6 +538,17 @@ screen and (min-resolution: 2dppx) {
     align-items: center;
     
 }
+.container_our_teams_item {
+    padding-bottom: 32px;
+}
+.our_teams_itam {
+    background-color: #fff;
+    width: 264px;
+    height: 428px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);}
 
 .our_teams_title_item {
     font-weight: 500;
