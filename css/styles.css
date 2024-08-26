@@ -338,7 +338,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-bottom: 96px;
+    
 }
 @media screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi), 
@@ -425,6 +425,7 @@ screen and (min-resolution: 2dppx) {
         max-width: 1440px;
         padding-top: 188px;
         padding-bottom: 188px;
+        margin-bottom: 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/herodesk-bg.jpg);
     }
         @media screen and (min-device-pixel-ratio: 2),
@@ -445,10 +446,12 @@ screen and (min-resolution: 2dppx) {
     display: none;
 }
 .advantages {
-    max-width: 288px;
+    max-width: 320px;
     margin: 0 auto;
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+
 .advantages-list {
     display: flex;
     flex-direction: column;
@@ -460,7 +463,6 @@ screen and (min-resolution: 2dppx) {
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    text-align: center;
     margin-bottom: 8px;
 }
 .advantages_text {
@@ -473,7 +475,7 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width:768px) {
     .advantages {
-            max-width: 736px;
+            max-width: 768px;
     }
     .advantages-list {
             flex-direction: row;
@@ -488,8 +490,13 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width:1158px) {
     .advantages {
-            max-width: 1128px;
-            margin-bottom: 120px;
+            max-width: 1440px;
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        .container{ 
+            padding-left: 0;
+            padding-right: 0; 
         }
     .advantages-list {
         flex-wrap: nowrap; 
@@ -500,6 +507,9 @@ screen and (min-resolution: 2dppx) {
         font-size: 20px;
         line-height: 1.2;
     }
+        .advantages_text {
+            font-weight: 400;}
+
         .advantages_svg_container {
             display: flex;
             align-items: center;
@@ -519,8 +529,11 @@ screen and (min-resolution: 2dppx) {
     padding-bottom: 96px;
     background: #f4f4fd;
     margin: 0 auto;
-    margin-bottom: 96px;
     
+}
+.container .container_our_teams {
+    padding-left: 28px;
+    padding-right: 28px;
 }
 .our_teams_title {
         font-weight: 700;
@@ -620,6 +633,10 @@ screen and (min-resolution: 2dppx) {
         padding-top: 120px;
         padding-bottom: 120px;
     }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
         .our_teams_list {
             flex-wrap: nowrap;
     
@@ -629,9 +646,9 @@ screen and (min-resolution: 2dppx) {
 /* our portfolio */
 
 .our_portfolio {
-max-width: 288px;
+max-width: 320px;
 margin: 0 auto;
-margin-bottom: 96px;
+padding: 96px 0;
 
 }
 
@@ -718,12 +735,14 @@ margin-bottom: 96px;
 
 @media screen and (min-width:1158px) {
     .our_portfolio {
-            max-width: 1128px;}
+    max-width: 1440px;
+    padding: 120px 0;
+}
 
-                        .our_portfolio_list {
+    .our_portfolio_list {
                     
-                            row-gap: 48px;
-                        }
+    row-gap: 48px;
+    }
            .our_portfolio_itam {
             box-shadow: none;
             transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -736,7 +755,8 @@ margin-bottom: 96px;
 }
 
 /* footer */
-.container_footer {
+.footer {
+    max-width: 320px;
     margin: 0 auto;
     background: #2e2f42;
     padding-top: 96px;
@@ -880,10 +900,15 @@ justify-content: center;
 }
 
 @media screen and (min-width:768px) {
-    .container_footer {
-        max-width: 768;
+    .footer {
+        max-width: 768px;
             padding-right: 164px;
             padding-left: 108px;}
+
+    .container_footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
         .container_footer_logo {
         margin-bottom: 0;
@@ -902,6 +927,9 @@ justify-content: center;
             display: flex;
             gap: 24px;
             margin-bottom: 72px;
+        }
+        .footer_input{
+            width: 264px;
         }
         .footer_subsribe_cont {
         max-width: 453px;
@@ -922,14 +950,14 @@ justify-content: center;
     max-width: 1440px;
     background: #2e2f42;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
    }
    .container_footer {
-    padding-top: 100px;
-    padding-right: 0;
-    padding-bottom: 100px;
-    padding-left: 0;
     display: flex;
-        align-items: baseline;
+    align-items: baseline;
+    padding-left: 16px;
+    padding-right: 16px;
    }
    .foorer_tab_cont {
        gap: 0;
